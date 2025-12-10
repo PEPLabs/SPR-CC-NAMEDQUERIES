@@ -1,0 +1,40 @@
+{
+  "type": "java",
+  "testFiles": [
+    {
+      "path": "src/test/java/BookRepositoryTest.java",
+      "testCases": [
+        {
+          "methodName": "testFindBookByIsbn",
+          "label": "Verify lookup of a book by ISBN",
+          "description": "Ensures that saving a book with a specific ISBN allows retrieval through the repository's findBookByIsbn method and that the returned book has the expected ISBN."
+        },
+        {
+          "methodName": "testFindBooksByAuthor",
+          "label": "Verify lookup of books by author",
+          "description": "Checks that multiple books saved with the same author can be retrieved using findBooksByAuthor and that the number of results matches the number of saved entries."
+        },
+        {
+          "methodName": "testFindBooksByAuthorAndDateAdded",
+          "label": "Verify lookup of books by author and date added",
+          "description": "Confirms that a book saved with a specific author and dateAdded is correctly returned when querying with findBooksByAuthorAndDateAdded."
+        },
+        {
+          "methodName": "testFindBookByTitle",
+          "label": "Verify lookup of a book by title",
+          "description": "Uses reflection to invoke the trainee-implemented find-by-title method and ensures a saved book with a given title can be retrieved and matches the expected title."
+        },
+        {
+          "methodName": "testFindBooksByAvailability",
+          "label": "Verify lookup of books by availability",
+          "description": "Ensures that the repository's find-by-availability method returns only books marked as available and that the result count matches the number of available books saved."
+        },
+        {
+          "methodName": "testFindBooksByDateAddedOrLastDateWithdrawn",
+          "label": "Verify lookup of books by date added or last date withdrawn",
+          "description": "Checks that the trainee-implemented method using OR logic returns a saved book when either dateAdded or lastDateWithdrawn matches the provided values."
+        }
+      ]
+    }
+  ]
+}
